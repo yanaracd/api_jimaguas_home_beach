@@ -24,6 +24,11 @@ app.use( express.urlencoded({ extended : false }))
 
 app.get('/', async ( req , res )=>{
 
+    res.json('Haciendo GET en /')
+})
+
+app.get('/usuarios', async ( req , res )=>{
+
     const buscar = await Usuario.find()
     res.json( buscar )
 })
