@@ -11,12 +11,11 @@ const postLogin = async ( req , res )=>{
     const { user , pass } = req.body
 
     const buscar = await Usuario.findOne({ user , pass })
-    
-    if( buscar !== null ){
-        res.json({ login : true })
-    }else{
-        res.json({ login : false })
-    }
+
+    let login   = buscar !== null ? true : false
+    let mensaje = buscar !== null ? `Usuario encontrado` : `Usuario no encontrado`
+
+    res.json({ login , mensaje })
 }
 
 // const getUsuarios = async ( req , res )=>{
