@@ -27,25 +27,19 @@ const postLogin = async ( req , res )=>{
 const postUsuarios = async ( req , res , next )=>{
 
     const { name , lastName , user , pass } = req.body
-    console.log({ name , lastName , user , pass })
 
-    // const sesion = await mongoose.startSession()
-    //       sesion.startTransaction()
+    const existe = await Usuario.findOne({user})
+    
+    if( existe === null ){
+        const nuevo = new Usuario({ name , lastName , user , pass })
+        await nuevo.save()
 
-    // try {
-    //     const nuevo = new Usuario({ user , pass })
-    //     await nuevo.save()
-
-    //     const buscar = await Usuario.find()
-    //     await sesion.commitTransaction()
-
-    //     res.json( buscar )        
-    // } catch ( err ) {
-    //     await sesion.abortTransaction()
-    //     next( err )
-    // }finally{
-    //     await sesion.endSession()
-    // }
+        let mensaje = `Usuario creado correctamente`
+        res.json( mensaje )
+    }else{
+        let mensaje = `El usuario ya existe`
+        res.json( mensaje )
+    }   
         
 }
 
