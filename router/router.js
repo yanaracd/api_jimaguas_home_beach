@@ -7,9 +7,9 @@ router.route('/')
     .get(getBasic)
     .post(postLogin)
 
-// router.route('/usuarios')
-//     .get(getUsuarios)
-//     .post(postUsuarios)
+router.route('/usuarios')
+    // .get(getUsuarios)
+    .post(postUsuarios)
 
 module.exports = {
     router

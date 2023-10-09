@@ -24,33 +24,34 @@ const postLogin = async ( req , res )=>{
 //     res.json( buscar )
 // }
 
-// const postUsuarios = async ( req , res , next )=>{
+const postUsuarios = async ( req , res , next )=>{
 
-//     const { user , pass } = req.body
+    const { name , lastName , user , pass } = req.body
+    console.log({ name , lastName , user , pass })
 
-//     const sesion = await mongoose.startSession()
-//           sesion.startTransaction()
+    // const sesion = await mongoose.startSession()
+    //       sesion.startTransaction()
 
-//     try {
-//         const nuevo = new Usuario({ user , pass })
-//         await nuevo.save()
+    // try {
+    //     const nuevo = new Usuario({ user , pass })
+    //     await nuevo.save()
 
-//         const buscar = await Usuario.find()
-//         await sesion.commitTransaction()
+    //     const buscar = await Usuario.find()
+    //     await sesion.commitTransaction()
 
-//         res.json( buscar )        
-//     } catch ( err ) {
-//         await sesion.abortTransaction()
-//         next( err )
-//     }finally{
-//         await sesion.endSession()
-//     }
+    //     res.json( buscar )        
+    // } catch ( err ) {
+    //     await sesion.abortTransaction()
+    //     next( err )
+    // }finally{
+    //     await sesion.endSession()
+    // }
         
-// }
+}
 
 module.exports = {
     getBasic,
-    postLogin
-    // getUsuarios,
-    // postUsuarios
+    postLogin,
+    // getUsuarios
+    postUsuarios
 }
