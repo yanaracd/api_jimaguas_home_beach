@@ -1,4 +1,3 @@
-const mongoose    = require("mongoose")
 const { Usuario } = require("../models/Usuario")
 
 const getBasic = ( req , res )=>{
