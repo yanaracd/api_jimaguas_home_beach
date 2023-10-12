@@ -13,7 +13,19 @@ const getReservas = async ( req , res )=>{
     res.json( buscar )
 }
 
+const postReservas = async ( req , res )=>{
+
+    const { entrada , salida , cantidad , hab } = req.body
+    
+    const nuevo = new Reserva({ entrada , salida , cantidad , hab })
+    await nuevo.save()
+
+    let mensaje = `Reserva creada correctamente`
+    res.json( mensaje )
+}
+
 module.exports = {
     getImagenes,
-    getReservas
+    getReservas,
+    postReservas
 }
