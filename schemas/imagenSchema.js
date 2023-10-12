@@ -1,7 +1,7 @@
 const mongoose = require("mongoose")
 
 const imagenSchema = new mongoose.Schema(
-    { src : String , alt : String , active : String , static : String },
+    { src : String , alt : String , active : String , statico : String },
     { collection : 'imagenes' }
 )
 
