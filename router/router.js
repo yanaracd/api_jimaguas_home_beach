@@ -1,6 +1,7 @@
 const express = require('express')
 const { getBasic, getUsuarios, postUsuarios, postLogin } = require('../controllers/login')
 const { getEnlaces } = require('../controllers/header')
+const { getImagenes } = require('../controllers/main')
 
 const router = express.Router()
 
@@ -14,6 +15,9 @@ router.route('/usuarios')
 
 router.route('/enlaces')
     .get(getEnlaces)
+
+router.route('/imagenes')
+    .get(getImagenes)
 
 module.exports = {
     router
