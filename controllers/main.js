@@ -1,4 +1,5 @@
 const { Imagen } = require("../models/Imagen")
+const { Reserva } = require("../models/Reserva")
 
 const getImagenes = async ( req , res )=>{
 
@@ -6,6 +7,13 @@ const getImagenes = async ( req , res )=>{
     res.json( buscar )
 }
 
+const getReservas = async ( req , res )=>{
+
+    const buscar = await Reserva.find()
+    res.json( buscar )
+}
+
 module.exports = {
-    getImagenes
+    getImagenes,
+    getReservas
 }
