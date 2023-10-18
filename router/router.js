@@ -1,7 +1,7 @@
 const express = require('express')
 const { getBasic, getUsuarios, postUsuarios, postLogin } = require('../controllers/login')
 const { getEnlaces } = require('../controllers/header')
-const { getImagenes, getReservas, postReservas } = require('../controllers/main')
+const { getImagenes, getReservas, postReservas, getRoomsLightbox } = require('../controllers/main')
 
 const router = express.Router()
 
@@ -22,6 +22,9 @@ router.route('/imagenes')
 router.route('/reservas')
     .get(getReservas)
     .post(postReservas)
+
+router.route('/rooms')
+    .get(getRoomsLightbox)
 
 module.exports = {
     router

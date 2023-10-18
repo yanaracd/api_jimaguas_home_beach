@@ -1,5 +1,6 @@
 const { Imagen } = require("../models/Imagen")
 const { Reserva } = require("../models/Reserva")
+const { Room } = require("../models/Room")
 
 const getImagenes = async ( req , res )=>{
 
@@ -24,8 +25,15 @@ const postReservas = async ( req , res )=>{
     res.json( mensaje )
 }
 
+const getRoomsLightbox = async( req , res)=>{
+
+    const buscar = await Room.find()
+    res.json( buscar )
+}
+
 module.exports = {
     getImagenes,
     getReservas,
-    postReservas
+    postReservas,
+    getRoomsLightbox
 }
