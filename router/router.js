@@ -32,7 +32,7 @@ router.route('/imagenesGrid')
 router.route('/imagenesGridDisabled')
     .get(getImagenesGridDisabled)
 
-router.route('anfitriones')
+router.route('/anfitriones')
     .get(getAnfitriones)
 
 module.exports = {
