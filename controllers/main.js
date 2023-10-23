@@ -3,6 +3,7 @@ const { Reserva } = require("../models/Reserva")
 const { Room } = require("../models/Room")
 const { ImagenGrid } = require("../models/ImagenGrid")
 const { ImagenGridDisabled } = require("../models/ImagenGridDisabled")
+const { Anfitrion } = require("../models/Anfitrion")
 
 const getImagenes = async ( req , res )=>{
 
@@ -45,11 +46,18 @@ const getImagenesGridDisabled = async ( req , res )=>{
     res.json( buscar )
 }
 
+const getAnfitriones = async ( req , res )=>{
+
+    const buscar = await Anfitrion.find()
+    res.json( buscar )
+}
+
 module.exports = {
     getImagenes,
     getReservas,
     postReservas,
     getRoomsLightbox,
     getImagenesGrid,
-    getImagenesGridDisabled
+    getImagenesGridDisabled,
+    getAnfitriones
 }
