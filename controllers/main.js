@@ -5,6 +5,7 @@ const { ImagenGrid } = require("../models/ImagenGrid")
 const { ImagenGridDisabled } = require("../models/ImagenGridDisabled")
 const { Anfitrion } = require("../models/Anfitrion")
 const { Servicio } = require("../models/Servicio")
+const { Service } = require("../models/Service")
 
 const getImagenes = async ( req , res )=>{
 
@@ -59,6 +60,12 @@ const getAnfitriones = async ( req , res )=>{
     res.json( buscar )
 }
 
+const getServices = async ( req , res )=>{
+
+    const buscar = await Service.find()
+    res.json( buscar )
+}
+
 module.exports = {
     getImagenes,
     getReservas,
@@ -67,5 +74,6 @@ module.exports = {
     getImagenesGrid,
     getImagenesGridDisabled,
     getServicios,
-    getAnfitriones
+    getAnfitriones,
+    getServices
 }

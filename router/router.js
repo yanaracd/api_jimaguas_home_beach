@@ -1,7 +1,7 @@
 const express = require('express')
 const { getBasic, getUsuarios, postUsuarios, postLogin } = require('../controllers/login')
 const { getEnlaces } = require('../controllers/header')
-const { getImagenes, getReservas, postReservas, getRoomsLightbox, getImagenesGrid, getImagenesGridDisabled, getAnfitriones, getServicios } = require('../controllers/main')
+const { getImagenes, getReservas, postReservas, getRoomsLightbox, getImagenesGrid, getImagenesGridDisabled, getAnfitriones, getServicios, getServices } = require('../controllers/main')
 const { getRrss } = require('../controllers/footer')
 
 const router = express.Router()
@@ -41,6 +41,9 @@ router.route('/anfitriones')
 
 router.route('/rrss')
     .get(getRrss)
+
+router.route('/services')
+    .get(getServices)
 
 module.exports = {
     router
