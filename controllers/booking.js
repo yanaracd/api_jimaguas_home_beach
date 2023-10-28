@@ -17,6 +17,16 @@ const postReservas = async (req, res) => {
     res.json(mensaje)
 }
 
+const putReserva = async (req, res) => {
+
+    const { _id, ...datos } = req.body
+
+    await Reserva.findByIdAndUpdate(_id, { ...datos })
+
+    const buscar = await Reserva.find()
+    res.json(buscar)
+}
+
 const deleteReserva = async (req, res) => {
 
     const { id } = req.params
@@ -30,5 +40,6 @@ const deleteReserva = async (req, res) => {
 module.exports = {
     getReservas,
     postReservas,
+    putReserva,
     deleteReserva
 }
