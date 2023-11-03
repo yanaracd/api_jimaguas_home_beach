@@ -25,6 +25,20 @@ app.use( express.json() )
 app.use( express.urlencoded({ extended : false }))
 app.use( router )
 
+app.all('*', ( req , res , next )=>{
+    const err   = new Error(`Endpoint NO existe`)
+    err.status  = 404
+    err.message = `Endpoint NO existe`
+    next(err)
+})
+
+app.use(( error , req , res , next )=>{
+    let { status , message } = error
+    status = status || 500
+
+    res.status(500).json({ status , message })
+})
+
 app.listen( 3000, ()=>{
     console.log('Iniciando API')
 })
