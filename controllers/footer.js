@@ -10,15 +10,6 @@ const getRrss = async (req, res, next) => {
     }
 }
 
-const getMensajes = async (req, res, next) => {
-    try {
-        const buscar = await Mensaje.find()
-        res.json(buscar)
-    } catch (error) {
-        next(error)
-    }
-}
-
 const postMensajes = async (req, res, next) => {
     try {
         const { texto } = req.body
@@ -36,6 +27,5 @@ const postMensajes = async (req, res, next) => {
 
 module.exports = {
     getRrss,
-    getMensajes,
     postMensajes
 }
