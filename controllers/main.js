@@ -15,7 +15,7 @@ const getImagenes = async (req, res, next) => {
     }
 }
 
-const getRoomsLightbox = async (req, res, next) => { 
+const getRoomsLightbox = async (req, res, next) => {
     try {
         const buscar = await Room.find()
         res.json(buscar)

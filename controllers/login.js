@@ -35,11 +35,11 @@ const postUsuarios = async (req, res, next) => {
         const { name, lastName, user, pass } = req.body
 
         const existe = await Usuario.findOne({ user })
-    
+
         if (existe === null) {
             const nuevo = new Usuario({ name, lastName, user, pass })
             await nuevo.save()
-    
+
             let mensaje = `Usuario creado correctamente`
             res.json(mensaje)
         } else {

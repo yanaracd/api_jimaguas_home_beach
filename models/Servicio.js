@@ -1,7 +1,7 @@
-const mongoose           = require("mongoose")
+const mongoose = require("mongoose")
 const { servicioSchema } = require("../schemas/servicioSchema")
 
-const Servicio = mongoose.model( 'Servicio' , servicioSchema )
+const Servicio = mongoose.model('Servicio', servicioSchema)
 
 module.exports = {
     Servicio
