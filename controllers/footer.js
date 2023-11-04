@@ -1,3 +1,12 @@
+/* ____________________________________________________ *\
+* @controller {footer.js} Rutas del Footer
+*
+* Estas rutas manejan las solicitudes relacionadas con el footer de la app
+* 
+* @route {GET} /rrss
+* @route {GET} /message
+* _____________________________________________________ */
+
 const { Mensaje } = require("../models/Mensaje")
 const { Rrss } = require("../models/Rrss")
 

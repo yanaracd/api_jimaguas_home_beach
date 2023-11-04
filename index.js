@@ -1,3 +1,13 @@
+/* ____________________________________________________ *\
+* API Express
+* Conectamos con la Base de Datos jimaguas_home_beach para devolver la información
+* 
+* @middlewares {cors, nodemon}
+* @routing     {Express Router}
+* @odm         {mongoose}
+* _____________________________________________________ */
+
+
 console.clear()
 
 const express = require('express')

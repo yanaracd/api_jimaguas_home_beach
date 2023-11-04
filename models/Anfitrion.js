@@ -1,3 +1,9 @@
+/* ____________________________________________________ *\
+* Modelo de la API
+*
+* @model {Object} Anfitrion
+* _____________________________________________________ */
+
 const mongoose = require("mongoose")
 const { anfitrionSchema } = require("../schemas/anfitrionSchema")
 

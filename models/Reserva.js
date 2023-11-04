@@ -1,3 +1,9 @@
+/* ____________________________________________________ *\
+* Modelo de la API
+*
+* @model {Object} Reserva
+* _____________________________________________________ */
+
 const mongoose = require("mongoose")
 const { reservaSchema } = require("../schemas/reservaSchema")
 

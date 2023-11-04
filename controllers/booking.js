@@ -1,3 +1,14 @@
+/* ____________________________________________________ *\
+* @controller {booking.js} Ruta de Reservas
+*
+* Esta ruta maneja las solicitudes relacionadas con las reservas
+* 
+* @route {GET}    /reservas
+* @route {POST}   /reservas
+* @route {PUT}    /reservas
+* @route {DELETE} /reservas/:id
+* _____________________________________________________ */
+
 const { Reserva } = require("../models/Reserva")
 
 const getReservas = async (req, res, next) => {

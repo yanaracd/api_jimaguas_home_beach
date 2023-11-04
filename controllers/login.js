@@ -1,3 +1,13 @@
+/* ____________________________________________________ *\
+* @controller {login.js} Rutas del Login
+*
+* Estas rutas manejan las solicitudes relacionadas con el login de la app
+* 
+* @route {GET}  /
+* @route {POST} /
+* @route {POST} /usuarios
+* _____________________________________________________ */
+
 const { Usuario } = require("../models/Usuario")
 
 const getBasic = (req, res, next) => {

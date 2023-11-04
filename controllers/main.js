@@ -1,3 +1,17 @@
+/* ____________________________________________________ *\
+* @controller {main.js} Rutas del Main
+*
+* Estas rutas manejan las solicitudes relacionadas con el main de la app
+* 
+* @route {GET} /imagenes
+* @route {GET} /rooms
+* @route {GET} /imagenesGrid
+* @route {GET} /imagenesGridDisabled
+* @route {GET} /servicios
+* @route {GET} /anfitriones
+* @route {GET} /services
+* _____________________________________________________ */
+
 const { Imagen } = require("../models/Imagen")
 const { Room } = require("../models/Room")
 const { ImagenGrid } = require("../models/ImagenGrid")

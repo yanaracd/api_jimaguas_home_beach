@@ -1,3 +1,9 @@
+/* ____________________________________________________ *\
+* Modelo de la API
+*
+* @model {Object} ImagenGridDisabled
+* _____________________________________________________ */
+
 const mongoose = require("mongoose")
 const { imagenGridDisabledSchema } = require("../schemas/imagenGridDisabledSchema")
 
